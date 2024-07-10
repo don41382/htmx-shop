@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: htmx-shop
+
+  devtools:
+    restart:
+      enabled: false
+    livereload:
+      enabled: true
+
+
+gg:
+  jte:
+    templateSuffix: .kte
+    templateLocation: src/main/kotlin/com/rocketsolutions/htmxshop/web
+    developmentMode: true
