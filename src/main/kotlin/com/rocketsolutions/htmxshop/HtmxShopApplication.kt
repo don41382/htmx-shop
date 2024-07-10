@@ -4,7 +4,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class HtmxShopApplication
+open class HtmxShopApplication
 
 fun main(args: Array<String>) {
     runApplication<HtmxShopApplication>(*args)

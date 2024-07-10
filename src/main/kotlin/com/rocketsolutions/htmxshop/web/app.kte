@@ -15,38 +15,39 @@
     <script src="webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">🐢 Turtle Treasures</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-                <a href="#" class="btn btn-outline-success">
-                    <i class="bi bi-cart"></i> Cart
-                    <span hx-get="/basketCount" hx-trigger="${IndexController.TRIGGER_BASKET_REFRESH_EVENT} from:body"
-                            class="badge bg-success">${basketCount}</span>
-                </a>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">🐢 Turtle Treasures</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+            <a href="#" class="btn btn-outline-success">
+                <i class="bi bi-cart"></i> Cart
+                <span hx-get="/basketCount" hx-trigger="${IndexController.TRIGGER_BASKET_REFRESH_EVENT} from:body"
+                      class="badge bg-success">${basketCount}</span>
+            </a>
         </div>
-    </nav>
-    ${content}
-    <footer class="bg-light mt-5 py-3">
-        <div class="container text-center">
-            <p>&copy; 2023 Turtle Treasures. All rights reserved.</p>
-            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-        </div>
-    </footer>
+    </div>
+</nav>
+${content}
+<footer class="bg-light mt-5 py-3">
+    <div class="container text-center">
+        <p>&copy; 2023 Turtle Treasures. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+</footer>
 </body>
 </html>

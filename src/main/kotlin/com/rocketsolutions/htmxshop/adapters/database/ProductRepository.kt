@@ -5,6 +5,7 @@ import java.util.UUID
 
 @Repository
 class ProductRepository {
+
     private val products =
         listOf(
             Product(
@@ -89,5 +90,3 @@ class ProductRepository {
 
     fun getAllProducts(): List<Product> = products
 }
-
-typealias ProductId = UUID

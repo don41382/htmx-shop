@@ -5,9 +5,9 @@ import com.rocketsolutions.htmxshop.adapters.database.ProductRepository.Product
 class JteproductlistGenerated {
 companion object {
 	@JvmField val JTE_NAME = "component/productlist.kte"
-	@JvmField val JTE_LINE_INFO = intArrayOf(0,0,0,2,2,2,2,2,6,6,6,9,9,9,9,9,9,9,9,9,11,11,11,12,12,12,13,13,13,14,14,14,14,19,19,21,22,22,22,2,2,2,2,2)
+	@JvmField val JTE_LINE_INFO = intArrayOf(0,0,0,2,2,2,2,2,4,4,4,7,7,7,7,7,7,7,7,7,9,9,9,10,10,10,11,11,11,12,12,12,12,16,16,17,18,18,18,2,2,2,2,2)
 	@JvmStatic fun render(jteOutput:gg.jte.html.HtmlTemplateOutput, jteHtmlInterceptor:gg.jte.html.HtmlInterceptor?, products:List<Product>) {
-		jteOutput.writeContent("\n\n\n")
+		jteOutput.writeContent("\n")
 		for (p in products) {
 			jteOutput.writeContent("\n    <div class=\"col\">\n        <div class=\"card product-card\">\n            <img")
 			val __jte_html_attribute_0 = p.imageUrl
@@ -31,9 +31,9 @@ companion object {
 			jteOutput.setContext("a", "hx-get")
 			jteOutput.writeUserContent(p.id.toString())
 			jteOutput.setContext("a", null)
-			jteOutput.writeContent("\" hx-swap=\"none\" class=\"btn btn-primary\">Add to\n                    Cart</a>\n            </div>\n        </div>\n    </div>\n")
+			jteOutput.writeContent("\" hx-swap=\"none\" class=\"btn btn-primary\">Add to Cart</a>\n            </div>\n        </div>\n    </div>\n")
 		}
-		jteOutput.writeContent("\n\n")
+		jteOutput.writeContent("\n")
 		jteOutput.writeContent("\n")
 	}
 	@JvmStatic fun renderMap(jteOutput:gg.jte.html.HtmlTemplateOutput, jteHtmlInterceptor:gg.jte.html.HtmlInterceptor?, params:Map<String, Any?>) {

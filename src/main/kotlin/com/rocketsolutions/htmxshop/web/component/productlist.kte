@@ -2,8 +2,6 @@
 
 @param products: List<Product>
 
-
-
 @for(p in products)
     <div class="col">
         <div class="card product-card">
@@ -12,11 +10,9 @@
                 <h5 class="card-title">${p.title}</h5>
                 <p class="card-text">${p.description}</p>
                 <p class="card-text"><strong>${p.price}</strong></p>
-                <a hx-get="/addToBasket/${p.id.toString()}" hx-swap="none" class="btn btn-primary">Add to
-                    Cart</a>
+                <a hx-get="/addToBasket/${p.id.toString()}" hx-swap="none" class="btn btn-primary">Add to Cart</a>
             </div>
         </div>
     </div>
 @endfor
-
 <!-- <div hx-get="/more" hx-trigger="revealed" hx-swap="outerHTML"></div> -->

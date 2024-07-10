@@ -1,14 +1,11 @@
 spring:
   application:
     name: htmx-shop
-
   devtools:
     restart:
       enabled: false
     livereload:
       enabled: true
-
-
 gg:
   jte:
     templateSuffix: .kte

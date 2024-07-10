@@ -13,12 +13,12 @@
             <div class="input-group">
                 <input
                         hx-post="/search" hx-trigger="input changed delay:200ms"
-                        type="text" class="form-control" placeholder="Search for turtle products..." name="q" value="${query}"
-                       aria-label="Search for turtle products" w-tid="29">
+                        type="text" class="form-control" placeholder="Search for turtle products..." name="q"
+                        value="${query}"
+                        aria-label="Search for turtle products" w-tid="29">
                 <button class="btn btn-outline-secondary" type="submit" w-tid="30">Search</button>
             </div>
         </form>
-
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="product-list">
             @template.component.productlist(products = products)
         </div>
