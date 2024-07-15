@@ -5,10 +5,9 @@ import org.springframework.stereotype.Repository
 
 @Repository
 class BasketRepository {
-
     private val basket = emptyList<Product>().toMutableList()
 
-    fun insertProduct(product: Product) = basket.add(product)
+    fun addToBasket(product: Product) = basket.add(product)
 
     fun findAll() = basket.toList()
 }

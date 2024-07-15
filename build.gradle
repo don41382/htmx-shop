@@ -19,17 +19,16 @@ repositories {
 }
 
 dependencies {
+    // frontend libraries (bootstrap + htmx)
+    implementation("org.webjars:bootstrap:5.3.3")
+    implementation("org.webjars.npm:htmx.org:2.0.0")
+
     // jte template engine
     implementation("gg.jte:jte:3.1.12")
     implementation("gg.jte:jte-kotlin:3.1.12")
     implementation("gg.jte:jte-spring-boot-starter-3:3.1.12")
 
-    // js libs / css
-    implementation("org.webjars:bootstrap:5.3.3")
-    implementation("org.webjars.npm:htmx.org:2.0.0")
-
-
-
+    // spring related
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
     implementation 'org.jetbrains.kotlin:kotlin-reflect'
@@ -43,8 +42,4 @@ kotlin {
     compilerOptions {
         freeCompilerArgs.addAll '-Xjsr305=strict'
     }
-}
-
-tasks.named('test') {
-    useJUnitPlatform()
 }
