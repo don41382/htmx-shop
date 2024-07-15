@@ -15,5 +15,5 @@ class ProductRepository {
 
     private val products = listOf<Product>()
 
-    fun getAllProducts(): List<Product> = products
+    fun findAll(): List<Product> = products
 }
