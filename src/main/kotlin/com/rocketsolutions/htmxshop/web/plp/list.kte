@@ -24,7 +24,7 @@
             </div>
         </form>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="product-list">
-            @template.pdp.component.productlist(products = products)
+            @template.plp.component.productlist(products = products)
         </div>
     </div>
 `, basketCount)

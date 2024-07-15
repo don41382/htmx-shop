@@ -29,7 +29,7 @@ class IndexController(
         }
         model.addAttribute("query", query)
         model.addAttribute("basketCount", productService.productsInBasket().size)
-        return "pdp/list"
+        return "plp/list"
     }
 
     @GetMapping("/addToBasket/{product-id}")
@@ -50,7 +50,7 @@ class IndexController(
         query: String,
         model: Model,
         response: HttpServletResponse,
-    ) = "pdp/component/productlist".also {
+    ) = "plp/component/productlist".also {
         model.addAttribute(
             "products",
             productService.allProducts().filter { it.title.lowercase().contains(query.lowercase()) },
@@ -60,7 +60,7 @@ class IndexController(
 
     @GetMapping("/more")
     fun more(model: Model) =
-        "pdp/component/productlist".also {
+        "plp/component/productlist".also {
             model.addAttribute("products", productService.allProducts().shuffled())
         }
 
