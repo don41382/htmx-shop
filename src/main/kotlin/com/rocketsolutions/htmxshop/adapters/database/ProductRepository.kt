@@ -88,5 +88,5 @@ class ProductRepository {
         val imageUrl: String,
     )
 
-    fun getAllProducts(): List<Product> = products
+    fun getAllProducts() = products
 }

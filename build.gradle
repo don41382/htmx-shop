@@ -1,8 +1,9 @@
 plugins {
-    id 'org.springframework.boot' version '3.3.1'
-    id 'io.spring.dependency-management' version '1.1.5'
-    id 'org.jetbrains.kotlin.jvm' version '1.9.24'
-    id 'org.jetbrains.kotlin.plugin.spring' version '1.9.24'
+    id 'org.springframework.boot' version '3.3.4'
+    id 'io.spring.dependency-management' version '1.1.6'
+    id 'org.jetbrains.kotlin.jvm' version '2.0.20'
+    id 'org.jetbrains.kotlin.plugin.spring' version '2.0.20'
+    id 'com.github.ben-manes.versions' version '0.51.0'
 }
 
 group = 'com.rocket-solutions'
@@ -10,7 +11,7 @@ version = '0.0.1-SNAPSHOT'
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
+        languageVersion = JavaLanguageVersion.of(21)
     }
 }
 
@@ -26,7 +27,7 @@ dependencies {
 
     // js libs / css
     implementation("org.webjars:bootstrap:5.3.3")
-    implementation("org.webjars.npm:htmx.org:2.0.0")
+    implementation("org.webjars.npm:htmx.org:2.0.2")
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'

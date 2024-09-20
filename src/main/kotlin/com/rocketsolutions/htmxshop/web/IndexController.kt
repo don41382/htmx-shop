@@ -36,7 +36,7 @@ class IndexController(
         }
 
     @GetMapping("/basketCount")
-    fun basketCount(): ResponseEntity<String> = ResponseEntity.ok(productService.productsInBasket().size.toString())
+    fun basketCount() = ResponseEntity.ok(productService.productsInBasket().size.toString())
 
     @PostMapping("/search")
     fun search(q: String, model: Model, response: HttpServletResponse) = "component/productlist".also {
