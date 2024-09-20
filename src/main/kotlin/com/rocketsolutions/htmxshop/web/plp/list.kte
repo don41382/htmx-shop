@@ -1,6 +1,0 @@
-@import com.rocketsolutions.htmxshop.adapters.database.ProductRepository.Product
-
-@param products: List<Product>
-
-@template.base(content = @`
-`)
