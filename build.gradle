@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '3.3.4'
+    id 'org.springframework.boot' version '3.4.0'
     id 'io.spring.dependency-management' version '1.1.6'
     id 'org.jetbrains.kotlin.jvm' version '2.0.20'
     id 'org.jetbrains.kotlin.plugin.spring' version '2.0.20'
@@ -15,33 +15,34 @@ java {
     }
 }
 
+kotlin {
+    jvmToolchain(21)
+    compilerOptions {
+        freeCompilerArgs.addAll '-Xjsr305=strict'
+    }
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
     // jte template engine
-    implementation("gg.jte:jte:3.1.12")
-    implementation("gg.jte:jte-kotlin:3.1.12")
-    implementation("gg.jte:jte-spring-boot-starter-3:3.1.12")
+    implementation("gg.jte:jte:3.1.15")
+    implementation("gg.jte:jte-kotlin:3.1.15")
+    implementation("gg.jte:jte-spring-boot-starter-3:3.1.15")
 
     // js libs / css
     implementation("org.webjars:bootstrap:5.3.3")
-    implementation("org.webjars.npm:htmx.org:2.0.2")
+    implementation("org.webjars.npm:htmx.org:2.0.4")
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
+    implementation 'com.fasterxml.jackson.module:jackson-module-kotlin:2.18.2'
     implementation 'org.jetbrains.kotlin:kotlin-reflect'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.jetbrains.kotlin:kotlin-test-junit5'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-}
-
-kotlin {
-    compilerOptions {
-        freeCompilerArgs.addAll '-Xjsr305=strict'
-    }
 }
 
 tasks.named('test') {
